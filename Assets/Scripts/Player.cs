@@ -84,7 +84,6 @@ public class Player : MonoBehaviour
         _head.SetActive(false);    
     }
 
-#region HEIGHT_CHANGE
     private void InitChangeHeight(float height)
     {
         if (_heightBodyBone != null)
@@ -152,9 +151,6 @@ public class Player : MonoBehaviour
         Debug.Log("c2 " + newC);
         _heightBodyBone.localPosition = new Vector3(_heightBodyBone.localPosition.x, newHeight, (newC - c) * 2 * addAngles);
     }
-#endregion
-
-#region WIDTH_CHANGE
     private void InitChangeWidth(float width)
     {
         if (_bodyParts.Count > 0)
@@ -191,7 +187,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-#endregion
 
     private void Update() 
     {
